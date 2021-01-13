@@ -12,6 +12,8 @@ public class Radix {
     }
 
     public static void merge(MyLinkedList original, MyLinkedList[] buckets) {
-
+        for (MyLinkedList i : buckets) {
+            original.extend(i);
+        }
     }
 }
