@@ -16,4 +16,12 @@ public class Radix {
             original.extend(i);
         }
     }
+
+    public static void radixSortSimple(SortableLinkedList data) {
+
+    }
+
+    public static void radixSort(SortableLinkedList data) {
+
+    }
 }
