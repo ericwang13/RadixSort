@@ -8,13 +8,7 @@ public class Radix {
     }
 
     public static int length(int n) {
-        return (int) Math.log10(n) + 1;
-    }
-
-    public static void merge(MyLinkedList original, MyLinkedList[] buckets) {
-        for (MyLinkedList i : buckets) {
-            original.extend(i);
-        }
+        return (int) Math.log10(Math.abs(n)) + 1;
     }
 
     public static void merge(SortableLinkedList original, SortableLinkedList[] buckets) {
@@ -35,7 +29,7 @@ public class Radix {
             while (data.size() > 0) {
                 curr = data.remove(0);
                 if (i == 0) {
-                    length = Math.max(length, curr);
+                    length = Math.max(length, length(curr));
                 }
 
                 buckets[nth(curr, i)].add(curr);
